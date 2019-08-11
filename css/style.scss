@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,200,300,400,700&display=swap');
+
+$main-font: 'IBM Plex Sans';
+$body-font: 'Nunito Sans'; 
+
+$main-color: #fd3900;
+$body-color: #2c3a46;
+
+$fcolor-head: #fd3900;
+$fcolor-body: #2c3a46;
+$fcolor-light: #fff;
+
+$mobile: 767px;
+$tablet: 1024px;
+
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+
+body {
+    font-family: $main-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $main-font;
+}
+
+p {
+    color: $fcolor-body;
+}
+
+a {
+    color: $main-color;
+}
+
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    display: inline-flex;
+    margin: 0;
+
+    @include mobile {
+        text-align: center;
+    }
+
+    a {
+        @include mobile {
+            font-size: 0.75rem;
+        }
+    }
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    padding-right: .5rem;
+    color: #6c757d;
+    content: ">";
+
+    @include mobile {
+        font-size: 0.6rem;
+    }
+}
+
+input.form-control {
+    height: 45px;
+}
+
+textarea, input, .form-control {
+    border-radius: 0;
+}
+
+button, .btn-warning, .btn-warning:hover, .btn-warning:focus {
+    background: $main-color;
+    border-color: $main-color;
+    color: $fcolor-light;
+    border-radius: 0;
+}
+
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus,
+textarea:active, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+    outline: 0px !important;
+    -webkit-appearance: none;
+    box-shadow: none !important;
+    border-color: $main-color;
+}
+
+.navbar-toggler {
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: .25rem;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    border-color: $main-color;
+    background-color: $main-color;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: $main-color;
+  box-shadow: none;
+  outline: 0 none;
+  border-radius: 0;
+}
+
+// HEADER START
+// header {
+//     position: fixed;
+//     width: 100%;
+// }
+
+.main-header {
+    background: url(../images/misc/header-image.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 80vh;
+
+    @include mobile {
+        height: 100vh;
+    }
+
+    nav {
+        margin-top: 15px;
+        padding: 20px;
+        background:rgba($color: #000000, $alpha: 0.1);
+
+        @include mobile {
+            background:rgba($color: #000000, $alpha: 0.9);
+        }
+
+        @include tablet {
+            background:rgba($color: #000000, $alpha: 0.9);
+        }
+    }
+
+    .nav-link {
+        color: $fcolor-light;
+    }
+}
+// HEADER END
+
+//SECTION START
+#registration-form {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    right: 0;
+    left: 0;
+    margin-bottom: 5rem;
+
+    @include mobile {
+        top: 20%;
+    }
+}
+
+.event-header {
+    margin: 30px 0;
+    text-align: center;
+
+    h4 {
+        font-weight: 100;
+        color: $fcolor-light;
+        font-size: 2rem;
+        padding: 0;
+        margin: 0;
+
+        @include mobile {
+            font-size: 1rem;
+            font-weight: 200;
+        }
+
+        @include tablet {
+            font-size: 1.5rem;
+        }
+    }
+    h1 {
+        font-weight: 100;
+        color: $fcolor-light;
+        font-size: 5rem;
+        padding: 0;
+        margin: 0;
+
+        @include mobile {
+            font-size: 2rem;
+        }
+
+        @include tablet {
+            font-size: 3.5rem;
+        }
+    }
+    p {
+        font-weight: 300;
+        color: $fcolor-light;
+        font-size: 1rem;
+        padding: 0;
+        margin: 30px 0 0 0;
+        line-height: 1.25;
+
+        @include mobile {
+            font-size: 0.75rem;
+            padding: 0 1rem;
+        }
+    }
+}
+
+.form-content {
+    background: #fff;
+    border: solid 1px #ddd;
+}
+
+.form-head {
+    border-bottom: solid 1px #ddd;
+    padding: 40px;
+    text-align: center;
+
+    @include mobile {
+        padding: 20px;
+    }
+}
+
+.form-body {
+    border-bottom: solid 1px #ddd;
+    padding: 40px;
+
+    @include mobile {
+        padding: 20px;
+    }
+
+    span.req {
+        color: $fcolor-head;
+    }
+
+    form {
+        margin: 15px 0;
+    }
+
+    label {
+        font-family: $main-font;
+        font-size: 15px;
+    }
+
+    small {
+        text-transform: uppercase;
+        opacity: .75;
+        font-family: $main-font;
+    }
+}
+
+.session-box {
+    border: solid 1px $main-color;
+    padding: 30px;
+    position: relative;
+    margin: 15px 0;
+
+    h6 {
+        color: $body-color;
+    }
+    h3 {
+        color: $fcolor-head;
+        font-weight: 700;
+        font-size: 1.25rem;
+
+        @include mobile {
+            font-size: 1rem;
+        }
+    }
+    p.session-detail {
+        font-size: 0.9rem;
+        line-height: 1.25;
+        opacity: .8;
+    }
+
+    .speaker-widget {
+        margin-top: 30px;
+
+        img {
+            float: left;
+            margin-right: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+        }
+        p.speaker-name {
+            font-size: 0.9rem;
+            line-height: 1.25;
+            margin: 0;
+            padding: 0;
+            font-weight: 700;
+        }
+        p.session-time {
+            font-size: 0.9rem;
+            line-height: 1.25;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .slot-widget {
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+
+        @include mobile {
+            position: relative;
+            margin-top: 30px;
+            right: 0;
+            bottom: 0;
+        }
+
+        span {
+            background: $main-color;
+            color: $fcolor-light;
+            font-size: 13px;
+            padding: 5px 10px;
+        }
+    }
+
+    .session-select {
+        position: absolute;
+        right: 20px;
+        top: 25px;
+    }
+}
+
+.session-box.no-slot {
+    background: #adadad;
+    border-color: $body-color;
+
+    h3 {
+        color: $fcolor-body;
+    }
+
+    .session-select {
+        display: none;
+    }
+
+    .slot-widget {
+        span {
+            background: $body-color;
+        }
+    }
+}
+
+.total-select {
+    h6 {
+        color: $fcolor-head;
+    }
+}
+
+.form-footer {
+    padding: 40px;
+
+    @include mobile {
+        padding: 20px;
+    }
+
+    button, .btn-warning, .btn-warning:hover, .btn-warning::focus {
+        background: $main-color;
+        border-color: $main-color;
+        color: $fcolor-light;
+        border-radius: 0;
+    }
+
+    .btn.btn-warning {
+        background: $main-color;
+        border-color: $main-color;
+        color: $fcolor-light;
+        border-radius: 0;
+      }
+      
+      .btn.btn-warning:active,
+      .btn.btn-warning:hover,
+      .btn.btn-warning:focus {
+        background: $main-color;
+        border-color: $main-color;
+        color: $fcolor-light;
+        border-radius: 0;
+      }
+}
+
+// Custom Events
+
+.session-box-checked {
+    border-color: $main-color;
+
+    h3 {
+        color: $fcolor-head;
+    }
+}
+
+.session-box-unchecked {
+    border-color: $body-color;
+
+    h3 {
+        color: $fcolor-body;
+    }
+}
+
+#paypal-buttons {
+    margin: 15px 0;
+    display: none;
+}
+
+.tran-row th:first-child {
+    white-space:nowrap;
+}
+
+.tran-row {
+    font-size: 0.9rem;
+}
+
+.confirm-success {
+
+    @include mobile {
+        text-align: center;
+    }
+
+    img {
+        float: left;
+        margin-right: 15px;
+
+        @include mobile {
+            float: none;
+            margin: 0 0 20px 0;
+        }
+    }
+    p {
+        font-size: 0.9.9rem;
+    }
+    .part-email {
+        font-weight: 700;
+    }
+}
+
+.confirm-summary {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f0f0f0;
+
+    img {
+        width: 100%;
+
+        @include mobile {
+            margin: 0 0 15px 0;
+        }
+    }
+
+    .confirm-status {
+        h5 {
+            background: $main-color;
+            color: $fcolor-light;
+            padding: 10px 20px;
+        }
+        tr {
+            font-size: 1rem;
+
+            @include mobile {
+                font-size: 0.8rem;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+#modal-gdpr {
+    .modal-content {
+        border-radius: 0;
+        border:0;
+    }
+    .modal.show .modal-dialog {
+        border-radius: 0;
+    }
+    .modal-header {
+        border-radius: 0;
+    }
+    .modal-footer {
+        justify-content: flex-start;
+        border-radius: 0;
+    }
+}
