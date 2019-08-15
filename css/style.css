@@ -177,43 +177,43 @@ input[type="color"]:focus,
   text-align: center;
 }
 
-.event-header h4 {
-  font-weight: 100;
+.event-header h6 {
+  font-weight: 200;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.25rem;
   padding: 0;
   margin: 0;
 }
 
 @media (max-width: 767px) {
-  .event-header h4 {
+  .event-header h6 {
     font-size: 1rem;
     font-weight: 200;
   }
 }
 
 @media (max-width: 1024px) {
-  .event-header h4 {
+  .event-header h6 {
     font-size: 1.5rem;
   }
 }
 
-.event-header h1 {
-  font-weight: 100;
+.event-header h3 {
+  font-weight: 200;
   color: #fff;
-  font-size: 5rem;
+  font-size: 2.25rem;
   padding: 0;
   margin: 0;
 }
 
 @media (max-width: 767px) {
-  .event-header h1 {
+  .event-header h3 {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 1024px) {
-  .event-header h1 {
+  .event-header h3 {
     font-size: 3.5rem;
   }
 }
@@ -507,20 +507,20 @@ input[type="color"]:focus,
   }
 }
 
-#modal-gdpr .modal-content {
+.modal .modal-content {
   border-radius: 0;
   border: 0;
 }
 
-#modal-gdpr .modal.show .modal-dialog {
+.modal .modal.show .modal-dialog {
   border-radius: 0;
 }
 
-#modal-gdpr .modal-header {
+.modal .modal-header {
   border-radius: 0;
 }
 
-#modal-gdpr .modal-footer {
+.modal .modal-footer {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
