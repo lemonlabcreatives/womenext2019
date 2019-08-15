@@ -195,10 +195,10 @@ input[type="color"]:focus,
     margin: 30px 0;
     text-align: center;
 
-    h4 {
-        font-weight: 100;
+    h6 {
+        font-weight: 200;
         color: $fcolor-light;
-        font-size: 2rem;
+        font-size: 1.25rem;
         padding: 0;
         margin: 0;
 
@@ -211,10 +211,10 @@ input[type="color"]:focus,
             font-size: 1.5rem;
         }
     }
-    h1 {
-        font-weight: 100;
+    h3 {
+        font-weight: 200;
         color: $fcolor-light;
-        font-size: 5rem;
+        font-size: 2.25rem;
         padding: 0;
         margin: 0;
 
@@ -500,7 +500,7 @@ input[type="color"]:focus,
     }
 }
 
-#modal-gdpr {
+.modal{
     .modal-content {
         border-radius: 0;
         border:0;
